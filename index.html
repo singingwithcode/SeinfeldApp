@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Seinfeld Data Analysis</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/addons/select2/dist/css/select2.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/addons/select2/dist/js/select2.min.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h2> <img src="data/logo.png" style="vertical-align:middle" alt="Seinfeld" width="200"> <span>Data Analysis</span>
+    </h2>
+  </header>
+
+
+  <!-- <div class="container">
+    <input id="toggle" type="checkbox" chebcked> -->
+  <!-- <label for="character_dropdown">SELECT A CHARACTER </label></h2> -->
+  <!-- <ul> -->
+
+  <!-- <li><a href="#chapter2">Chapter 02</a></li>
+        <li><a href="#chapter3">Chapter 03</a></li>
+        <li><a href="#chapter4">Chapter 04</a></li> -->
+  <!-- </ul> -->
+  <!-- </div> -->
+
+
+
+  <section>
+    <nav>
+      <ul>
+        <li>Choose a Season: <select id="season_dropdown" class="season_dropdown-content"></select> </li>
+        <li>Choose a Character: <select id="character_dropdown" class="character_dropdown-content"></select> </li>
+        <!-- <input id="toggle" type="checkbox" chebcked> -->
+        <!-- <label for="character_dropdown">SELECT A CHARACTER </label></h2> -->
+        <!--<select id="character_dropdown" class="character_dropdown-content"></select>-->
+        <!-- <li><a href="#chapter2">Chapter 02</a></li>
+        <li><a href="#chapter3">Chapter 03</a></li>
+        <li><a href="#chapter4">Chapter 04</a></li> -->
+      </ul>
+    </nav>
+    <content>
+
+      <!-- Bar: Linecount -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <svg id="linecount"></svg>
+          <div id="tooltip1"></div>
+        </div>
+      </div>
+
+      <!-- Bar: Episode Count -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <svg id="episodeCount"></svg>
+          <div id="tooltip2"></div>
+        </div>
+      </div>
+
+      <!-- Global WordCloud -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <svg id="wordcloud"></svg>
+        </div>
+      </div>
+
+      <!-- Bar: Selected Season -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="s-container"></div>
+        </div>
+      </div>
+
+      <!-- Global WordCloud -->
+      <div class="c-container"></div>
+      <div class="w-container"></div>
+
+
+      <!-- TBD -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <svg id="linesperseason"></svg>
+          <svg id="wordcloud"></svg>
+          <svg id="sznnumepisodes"></svg>
+          <svg id="characterWordcloud"></svg>
+        </div>
+      </div>
+
+    </content>
+  </section>
+
+  <footer>
+    <p>By: <b>Ryan Gengler, Aaron Verst, Josh Shell, Matt Klich</b></p>
+  </footer>
+
+  <!-- D3 bundle -->
+  <script src="js/d3.v6.min.js"></script>
+
+  <!-- Our JS code -->
+  <script src="js/main.js"></script>
+  <script src="js/wordcloud.js"></script>
+  <script src="js/totalLineCount.js"></script>
+  <script src="js/episodesAppearedIn.js"></script>
+  <script src="js/linesperseason.js"></script>
+  <script src="js/sznNumEpisodes.js"></script>
+  <script src="js/CharacterData.js"></script>
+  <script src="js/character_index.js"></script>
+  <script src="js/lines_per_episode.js"></script>
+  <script src="js/characterWordcloud.js"></script>
+  <script src="js/season_index.js"></script>
+  <script src="js/seasonData.js"></script>
+  <script src="js/seasonBarchart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+
+  <div id="tooltip"></div>
+
+</body>
+
+</html>
